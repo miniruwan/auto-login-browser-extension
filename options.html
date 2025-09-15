@@ -4,10 +4,122 @@
   <meta charset="UTF-8">
   <title>Auto Login Hint Injector Options</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 2em; }
-    label, input, button { display: block; margin: 0.5em 0; }
-    table { border-collapse: collapse; margin-top: 1em; }
-    th, td { border: 1px solid #ccc; padding: 0.5em; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 2em;
+      background: #f8f9fa;
+      color: #222;
+    }
+    h1, h2 {
+      color: #2a4d7c;
+    }
+    form {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      padding: 1.5em 2em 1em 2em;
+      margin-bottom: 2em;
+      max-width: 420px;
+    }
+    label {
+      margin: 0.7em 0 0.2em 0;
+      font-weight: 500;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 0.5em;
+      border: 1px solid #bfc9d1;
+      border-radius: 4px;
+      font-size: 1em;
+      margin-bottom: 0.5em;
+      background: #f6f8fa;
+      transition: border 0.2s;
+    }
+    input[type="text"]:focus {
+      border: 1.5px solid #2a4d7c;
+      outline: none;
+      background: #fff;
+    }
+    button {
+      background: #2a4d7c;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 0.5em 1.2em;
+      font-size: 1em;
+      margin: 0.2em 0.2em 0.2em 0;
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+    button:hover, button:focus {
+      background: #1b3355;
+    }
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-top: 1em;
+      width: 100%;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      overflow: hidden;
+    }
+    th, td {
+      border: none;
+      padding: 0.7em 0.7em;
+      text-align: left;
+    }
+    th {
+      background: #e6ecf5;
+      color: #2a4d7c;
+      font-weight: 600;
+      font-size: 1.05em;
+    }
+    tr {
+      border-bottom: 1px solid #e6ecf5;
+      transition: background 0.15s;
+    }
+    tr:last-child {
+      border-bottom: none;
+    }
+    tr:hover {
+      background: #f0f4fa;
+    }
+    .edit input[type="text"] {
+      background: #fffbe6;
+      border: 1.5px solid #f7c873;
+    }
+    .edit-btn, .save-btn, .cancel-btn, .remove-btn {
+      min-width: 60px;
+      margin-right: 0.2em;
+      margin-bottom: 0.2em;
+    }
+    .remove-btn {
+      background: #e74c3c;
+    }
+    .remove-btn:hover, .remove-btn:focus {
+      background: #b93222;
+    }
+    .save-btn {
+      background: #27ae60;
+    }
+    .save-btn:hover, .save-btn:focus {
+      background: #1e874a;
+    }
+    .cancel-btn {
+      background: #bfc9d1;
+      color: #222;
+    }
+    .cancel-btn:hover, .cancel-btn:focus {
+      background: #8a99a8;
+      color: #fff;
+    }
+    @media (max-width: 600px) {
+      form, table { max-width: 100%; }
+      body { margin: 0.5em; }
+      th, td { font-size: 0.98em; }
+    }
   </style>
 </head>
 <body>
