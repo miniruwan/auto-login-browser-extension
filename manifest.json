@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Auto Login Hint Injector",
   "version": "1.0.0",
-  "description": "Automatically adds login_hint to URLs based on redirect_uri mapping.",
+  "description": "Automatically adds login_hint to URLs based on stored mapping.",
   "permissions": [
     "webRequest",
     "storage",

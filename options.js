@@ -1,5 +1,4 @@
-// options.js
-// Logic to manage redirect_uri substring to login_hint mapping
+// Logic to manage url substring to login_hint mapping
 
 const form = document.getElementById('mappingForm');
 const redirectUriInput = document.getElementById('redirectUriSubstring');
@@ -42,7 +41,7 @@ form.addEventListener('submit', (e) => {
 		const mappings = data.mappings;
 		// Prevent duplicates
 		if (mappings.some(m => m.redirectUriSubstring === redirectUriSubstring)) {
-			alert('Mapping for this redirect_uri substring already exists.');
+			alert(`Mapping for this redirect URI substring already exists. ${redirectUriSubstring}`);
 			return;
 		}
 		mappings.push({ redirectUriSubstring, loginHint });
@@ -85,7 +84,7 @@ tableBody.addEventListener('click', (e) => {
 			const mappings = data.mappings;
 			// Prevent duplicate redirectUriSubstring except for this row
 			if (mappings.some((m, i) => i !== idx && m.redirectUriSubstring === newRedirect)) {
-				alert('Mapping for this redirect_uri substring already exists.');
+				alert(`Mapping for this redirect URI substring already exists. ${newRedirect}`);
 				return;
 			}
 			mappings[idx] = { redirectUriSubstring: newRedirect, loginHint: newLogin };
