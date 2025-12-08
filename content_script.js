@@ -12,7 +12,6 @@
     chrome.storage.sync.get({ mappings: [] }, (data) => {
       const mappings = data.mappings || [];
       let mapping = null;
-      let matchValue = null;
       for (const value of paramsToCheck) {
         if (!value) continue;
         mapping = mappings.find(m =>
@@ -21,7 +20,6 @@
           value.includes(m.redirectUriSubstring)
         );
         if (mapping) {
-          matchValue = value;
           break;
         }
       }
@@ -29,6 +27,7 @@
         return;
       }
       url.searchParams.set('login_hint', mapping.loginHint);
+      url.searchParams.set('prompt', 'none');
       const newUrl = url.toString();
       if (newUrl !== window.location.href) {
         console.log('[Auto Login Hint Injector] Redirecting to new URL with login_hint:', mapping.loginHint);
