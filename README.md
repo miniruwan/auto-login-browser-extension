@@ -11,12 +11,15 @@ This browser extension automatically adds a `login_hint` parameter to authentica
 
 
 ## How to Configure the Plugin
+
 1. Click the extension icon and select "Options" or open the options page from your browser's extension menu.
 2. Add a new mapping:
     - **redirectUriSubstring**: A unique substring to match within the `redirect_uri` or `RelayState` value.
     - **loginHint**: The value to inject as the `login_hint` parameter.
 3. Save your mappings. The extension will now automatically apply the login hint when a matching URL is detected.
 
+Refer the example configuration below:
+![Example Configuration](Example_Configuration.jpg)
 
 ## How to Install the Plugin Locally
 ### Chrome / Edge
