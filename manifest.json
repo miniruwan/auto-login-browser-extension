@@ -19,6 +19,7 @@
   },
   "options_page": "options.html",
   "action": {
-    "default_title": "Auto Login Hint Injector"
+    "default_title": "Auto Login Hint Injector",
+    "default_popup": "popup.html"
   }
 }
