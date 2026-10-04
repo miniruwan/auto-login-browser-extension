@@ -27,11 +27,9 @@
       url.searchParams.get('RelayState')
     ].filter(v => v);
 
-    if (params.length === 0) {
-      const acsUrl = await extractAssertionConsumerServiceURL(url);
-      if (acsUrl) {
-        params.push(acsUrl);
-      }
+    const acsUrl = await extractAssertionConsumerServiceURL(url);
+    if (acsUrl) {
+      params.push(acsUrl);
     }
 
     return params;
